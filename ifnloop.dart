@@ -42,16 +42,45 @@ void main() {
   // =========================================================================================
 
   // 2. Menampilkan bilangan 1–20
-  for (int i = 1; i <= 20; i++) {
-    if (i % 3 == 0 && i % 5 == 0) {
-      print('$i: FizzBuzz');
-    } else if (i % 3 == 0) {
-      print('$i: Fizz');
-    } else if (i % 5 == 0) {
-      print('$i: Buzz');
-    } else {
-      print('$i');
+  // for (int i = 1; i <= 20; i++) {
+  //   if (i % 3 == 0 && i % 5 == 0) {
+  //     print('$i: FizzBuzz');
+  //   } else if (i % 3 == 0) {
+  //     print('$i: Fizz');
+  //   } else if (i % 5 == 0) {
+  //     print('$i: Buzz');
+  //   } else {
+  //     print('$i');
+  //   }
+  // }
+
+  // print('\n');
+
+  // =========================================================================================
+
+  // 3. Aplikasi penghitung
+  List<double> daftarAngka = [];
+
+  for (int i = 1; i <= 5; i++) {
+    stdout.write('Masukkan angka ke-$i: ');
+    String? inputAngka = stdin.readLineSync();
+    if (inputAngka != null && inputAngka.isNotEmpty) {
+      daftarAngka.add(double.parse(inputAngka));
     }
+  }
+
+  if (daftarAngka.length == 5) {
+    double jumlah = daftarAngka.reduce((a, b) => a + b);
+    double rataRata = jumlah / daftarAngka.length;
+    double maksimum = daftarAngka.reduce((a, b) => a > b ? a : b);
+    double minimum = daftarAngka.reduce((a, b) => a < b ? a : b);
+
+    print('Jumlah         : $jumlah');
+    print('Rata-rata      : $rataRata');
+    print('Nilai Maksimum : $maksimum');
+    print('Nilai Minimum  : $minimum');
+  } else {
+    print('Input minimal 5 angka.');
   }
 
   print('\n');
