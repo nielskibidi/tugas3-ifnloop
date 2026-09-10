@@ -89,24 +89,24 @@ void main() {
   // =========================================================================================
 
   // 4. Aplikasi menebak angka
-  var random = Random();
-  int angkaRandom = random.nextInt(6);
+  // var random = Random();
+  // int angkaRandom = random.nextInt(6);
 
-  stdout.write('Masukan Angka Anda (0-5): ');
-  String? inputTebakan = stdin.readLineSync();
+  // stdout.write('Masukan Angka Anda (0-5): ');
+  // String? inputTebakan = stdin.readLineSync();
 
-  if (inputTebakan != null && inputTebakan.isNotEmpty) {
-    int angkaTebakan = int.parse(inputTebakan);
+  // if (inputTebakan != null && inputTebakan.isNotEmpty) {
+  //   int angkaTebakan = int.parse(inputTebakan);
 
-    print('Angka Komputer : $angkaRandom');
-    print('Tebakan Anda   : $angkaTebakan');
+  //   print('Angka Komputer : $angkaRandom');
+  //   print('Tebakan Anda   : $angkaTebakan');
 
-    if (angkaTebakan == angkaRandom) {
-      print('Selamat, tebakan Anda benar!');
-    } else {
-      print('Maaf, tebakan Anda salah. Coba lagi!');
-    }
-  } else {
-    print('Input tidak boleh kosong!');
-  }
+  //   if (angkaTebakan == angkaRandom) {
+  //     print('Selamat, tebakan Anda benar!');
+  //   } else {
+  //     print('Maaf, tebakan Anda salah. Coba lagi!');
+  //   }
+  // } else {
+  //   print('Input tidak boleh kosong!');
+  // }
 }
